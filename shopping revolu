@@ -14,6 +14,21 @@ class AIShoppingSystem {
             scanner.close();
             return;
 }
+ System.out.print("Enter product name: ");
+        String input = scanner.nextLine();
+        boolean productFound = false;
+        
+        for (String product : products) {
+            if (product.equalsIgnoreCase(input)) {
+                System.out.println("Product found: " + product);
+                productFound = true;
+                break;
+            }
+        }
+
+        if (!productFound) {
+            System.out.println("Product not found.");
+        }
         System.out.println("Enter keyword (e.g., Laptop):");
         String input = scanner.nextLine();
         for (String product : products) {
