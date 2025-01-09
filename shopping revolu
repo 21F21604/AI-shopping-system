@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class AIShoppingSystem {
+    public static void main(String[] args) {
+        String[] products = {"Laptop", "Phone", "Headphones"};
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter keyword (e.g., Laptop):");
+        String input = scanner.nextLine();
+        for (String product : products) {
+            if (product.equalsIgnoreCase(input)) {
+                System.out.println("Product found: " + product);
+            }
+        }
+        scanner.close();
+    }
