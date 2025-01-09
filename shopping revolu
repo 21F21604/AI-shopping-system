@@ -8,6 +8,11 @@ class AIShoppingSystem {
         for (String product : products) {
             if (product.equalsIgnoreCase(input)) {
                 System.out.println("Product found: " + product);
+                System.out.println("Enter delivery date:");
+                String date = scanner.nextLine();
+                System.out.println("Order scheduled for " + product + " on " + date);
+                scanner.close();
+                return;
             }
         }
         scanner.close();
